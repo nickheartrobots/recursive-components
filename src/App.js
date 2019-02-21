@@ -1,28 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './Components/Header';
+import RecursiveBracket from './Components/RecursiveBracket';
+
+// NCAA Midwest Regional 2018
+const data = [
+    "Kansas",
+    "Penn",
+    "Seton Hall",
+    "NC State",
+    "Clemson",
+    "New Mexico State",
+    "Auburn",
+    "College of Charleston",
+    "TCU",
+    "Syracuse",
+    "Michigan State",
+    "Bucknell",
+    "Rhode Island",
+    "Oklahoma",
+    "Duke",
+    "Iona"
+];
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div className="container">
+				<Header />
+				<RecursiveBracket teams={data}/>
+			</div>
+		);
+	}
 }
 
 export default App;
